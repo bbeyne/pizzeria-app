@@ -10,9 +10,9 @@ public class PizzeriaAdminConsoleApp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DaoFactory daoFactory = new DaoMemFactory();
+		DaoFactory daoFactory = new DaoFichFactory();
 		List<Pizza> pizza = daoFactory.getPizzaDao().findAllPizzas();
 		Menu menu= new Menu();
-		menu.menu(pizza);
+		menu.menu(pizza,daoFactory);
 	}
 }

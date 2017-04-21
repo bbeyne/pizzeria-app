@@ -73,7 +73,7 @@ public class PizzaDaoImplFichier implements IPizzaDao {
 
 	@Override
 	public boolean DeletePizza(String codePizza) throws ExceptionMauvaisCode {
-		File fichier = new File(codePizza+".txt");
+		File fichier = new File(dataDir+"/"+codePizza+".txt");
 		fichier.delete();
 		return false;
 	}

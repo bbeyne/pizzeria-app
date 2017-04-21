@@ -1,22 +1,24 @@
 package fr.pizzeria.IHM;
 
+import com.github.lalyos.jfiglet.FigletFont;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 import fr.pizzeria.model.Pizza;
-import fr.pizzeria.Dao.PizzaDaoImpl;
+import fr.pizzeria.Dao.DaoFactory;
+import fr.pizzeria.Dao.IPizzaDao;
 public class Menu {
 	
-	public boolean menu(List<Pizza> pizza) {
-		PizzaDaoImpl daoimpl = new PizzaDaoImpl(pizza);
+	public boolean menu(List<Pizza> pizza, DaoFactory daoimpl) {
+		
 		int a =0;		
 		Scanner questionUser = new Scanner(System.in);
 		questionUser.useLocale(Locale.US);
-		OptionMenu opt= new OptionMenu(daoimpl);
+		OptionMenu opt= new OptionMenu(daoimpl.getPizzaDao());
 		while (a!=99){
-			menuaffich(daoimpl);
+			menuaffich(daoimpl.getPizzaDao());
 			a = questionUser.nextInt();
 			opt.option(a);
 		}
@@ -24,12 +26,18 @@ public class Menu {
 		 return true;
 
 	}
-	private static void menuaffich(PizzaDaoImpl daoimpl) {
+	private static void menuaffich(IPizzaDao daoimpl) {
 		ListerPizzasOptionMenu listage = new ListerPizzasOptionMenu(daoimpl);	
 		NouvellePizzaOptionMenu ajout = new NouvellePizzaOptionMenu(daoimpl);
 		ModifPizzaOptionMenu modif = new ModifPizzaOptionMenu(daoimpl);
 		SuppPizzaOptionMenu supp = new SuppPizzaOptionMenu(daoimpl);
-		System.out.println("    ***** Pizzeria Administration *****");
+		//try{
+			String asciiArt = FigletFont.convertOneLine("PIZZERIA APP");
+			System.out.println(asciiArt);
+//		}catch (IOException e){
+//			e.printStackTrace();
+//		}
+
 		System.out.println(listage.libelle);
 		System.out.println(ajout.libelle);
 		System.out.println(modif.libelle);
