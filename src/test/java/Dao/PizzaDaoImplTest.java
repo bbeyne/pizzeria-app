@@ -1,4 +1,4 @@
-package fr.pizzeria.Dao;
+package Dao;
 
 import java.util.List;
 

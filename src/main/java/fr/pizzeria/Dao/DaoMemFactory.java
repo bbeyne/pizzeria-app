@@ -1,7 +1,7 @@
 package fr.pizzeria.Dao;
 
 public class DaoMemFactory implements DaoFactory{
-	private IPizzaDao pizzaDao = new PizzaDaoImpl();
+	private IPizzaDao pizzaDao = null;
 	@Override
 	public IPizzaDao getPizzaDao() {
 		return pizzaDao;

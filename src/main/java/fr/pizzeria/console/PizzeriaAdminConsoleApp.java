@@ -13,6 +13,6 @@ public class PizzeriaAdminConsoleApp {
 		DaoFactory daoFactory = new DaoFichFactory();
 		List<Pizza> pizza = daoFactory.getPizzaDao().findAllPizzas();
 		Menu menu= new Menu();
-		menu.menu(pizza,daoFactory);
+		menu.menu(pizza);
 	}
 }

@@ -8,11 +8,12 @@ import java.util.Scanner;
 
 import fr.pizzeria.model.Pizza;
 import fr.pizzeria.Dao.DaoFactory;
+import fr.pizzeria.Dao.DaoFichFactory;
 import fr.pizzeria.Dao.IPizzaDao;
 public class Menu {
 	
-	public boolean menu(List<Pizza> pizza, DaoFactory daoimpl) {
-		
+	public boolean menu(List<Pizza> pizza) {
+		DaoFactory daoimpl = new DaoFichFactory();
 		int a =0;		
 		Scanner questionUser = new Scanner(System.in);
 		questionUser.useLocale(Locale.US);

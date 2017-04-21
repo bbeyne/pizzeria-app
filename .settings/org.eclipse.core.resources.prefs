@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
-encoding//Data/MAR.txt=UTF-8
-encoding//Data/PEP.txt=UTF-8
+encoding//data/MAR.txt=UTF-8
+encoding//src/main/java=UTF-8
+encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8
-encoding/Data=UTF-8
+encoding/data=UTF-8
