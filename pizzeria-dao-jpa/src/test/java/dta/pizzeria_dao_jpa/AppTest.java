@@ -1,4 +1,4 @@
-package org.pizzeria.dao.api;
+package dta.pizzeria_dao_jpa;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

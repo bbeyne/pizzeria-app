@@ -2,24 +2,22 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  
   <parent>
     <groupId>dta</groupId>
     <artifactId>pizzeria-app</artifactId>
     <version>1.0.0</version>
   </parent>
+  
   <artifactId>pizzeria-dao-memoire</artifactId>
-  <name>pizzeria-dao-memoire</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  
   <dependencies>
     <dependency>
-    	<groupId>dta</groupId>
+    	<groupId>${projet.groupId}</groupId>
     	<artifactId>pizzeria-domain</artifactId>
     </dependency>
     <dependency>
-    	<groupId>dta</groupId>
+    	<groupId>${projet.groupId}</groupId>
     	<artifactId>pizzeria-dao-api</artifactId>
     </dependency>
   </dependencies>

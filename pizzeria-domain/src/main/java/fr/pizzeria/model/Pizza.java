@@ -1,5 +1,9 @@
 package fr.pizzeria.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="pizzas")
 public class Pizza {
 
 		public int getId() {
@@ -41,13 +45,26 @@ public class Pizza {
 	public void setCategorie(CategoriePizza categorie) {
 		this.categorie = categorie;
 	}
-
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		private int id;
+		@Column(name="code")
 		private String code;
+		@Column(name="libelle")
 		private String nom;
+		@Column(name="prix")
 		private double prix;
+		@Column(name="categorie")
+		@Enumerated(EnumType.STRING)
 		private CategoriePizza categorie;
 		
+		public String toString(){
+			return (code+" "+nom+" "+prix+" "+categorie);
+			
+		}
+		public Pizza() {
+			super();
+		}
 
 		public Pizza(String code, String nom, double prix, CategoriePizza categorie){
 			this.code=code;

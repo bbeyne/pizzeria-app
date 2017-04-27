@@ -8,16 +8,14 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>pizzeria-dao-fichier</artifactId>
-  <name>pizzeria-dao-fichier</name>
-  <url>http://maven.apache.org</url>
- 
+  
   <dependencies>
     <dependency>
-    	<groupId>dta</groupId>
+    	<groupId>${projet.groupId}</groupId>
     	<artifactId>pizzeria-dao-api</artifactId>
     </dependency>
     <dependency>
-    	<groupId>dta</groupId>
+    	<groupId>${projet.groupId}</groupId>
     	<artifactId>pizzeria-domain</artifactId>
     </dependency>
   </dependencies>

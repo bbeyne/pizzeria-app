@@ -27,7 +27,7 @@ public class PizzaDaoImpl implements IPizzaDao {
 		pizza.add(new Pizza("ORI", "L'orientale", 13.50,CategoriePizza.valueOf("VIANDE")));
 		pizza.add(new Pizza("IND", "L'indienne", 14.00,CategoriePizza.valueOf("VIANDE")));
 		pizza.add(new Pizza("NOR", "La Norvegienne",15.00, CategoriePizza.valueOf("POISSON")));
-		pizzas = pizza;
+		this.pizzas = pizza;
 	}
 
 	@Override

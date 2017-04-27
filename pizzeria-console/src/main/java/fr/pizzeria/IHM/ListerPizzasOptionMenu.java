@@ -1,10 +1,10 @@
 package fr.pizzeria.IHM;
 
-import fr.pizzeria.model.Pizza;
-
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import fr.pizzeria.dao.IPizzaDao;
+import fr.pizzeria.model.Pizza;
 public class ListerPizzasOptionMenu extends OptionMenu {
 
 	public ListerPizzasOptionMenu(IPizzaDao dao) {

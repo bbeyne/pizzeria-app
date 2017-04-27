@@ -29,10 +29,14 @@ public class OptionMenu {
 				SuppPizzaOptionMenu supp = new SuppPizzaOptionMenu(dao);
 				supp.execute();
 			}
+			if (a==5){
+				ImportDonnees imp = new ImportDonnees(dao);
+				imp.execute();
+			}
 			if (a==99){
 				System.out.println(" Au revoir \uD83D\uDE23");
 			}
-			if ((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=99)){
+			if ((a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=99)){
 				System.out.println("choix erroné");
 			}
 			return true;
