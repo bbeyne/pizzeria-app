@@ -1,5 +1,7 @@
 package fr.pizzeria.model;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -57,7 +59,15 @@ public class Pizza {
 		@Column(name="categorie")
 		@Enumerated(EnumType.STRING)
 		private CategoriePizza categorie;
-		
+		@ManyToMany(mappedBy="pizzas")
+		private Set<Commande> commandes;
+
+
+
+		public void setCommandes(Set<Commande> commandes) {
+			this.commandes = commandes;
+		}
+
 		public String toString(){
 			return (code+" "+nom+" "+prix+" "+categorie);
 			
