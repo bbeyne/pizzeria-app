@@ -3,13 +3,11 @@ package fr.pizzeria.client.IHM;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-
 import org.apache.commons.codec.digest.DigestUtils;
 
 import fr.pizzeria.model.Client;
+import fr.pizzeria.dao.jpa.*;
 
 public class Inscription extends OptionMenuClient{
 
@@ -34,12 +32,8 @@ public class Inscription extends OptionMenuClient{
 		System.out.println("Ecrire votre mot de passe");
 		String mdp = questionUser.next();
 		Client client = new Client(nom, prenom, adresse, mail, DigestUtils.sha1Hex(mdp));
-		EntityManager em = fact.createEntityManager();
-		EntityTransaction et = em.getTransaction();
-		et.begin();
-		em.persist(client);
-		et.commit();
-		em.close();
+		ClientDaoJpa cl = new ClientDaoJpa(fact);
+		cl.SaveNewClient(client);
 		return true;
 	}
 }

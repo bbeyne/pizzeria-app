@@ -44,9 +44,7 @@ public class Connexion extends OptionMenuClient{
 			System.out.println("99. Sortir");
 			int a = questionUser.nextInt();
 			if (a==1)	comm.execute(client);
-			if (a==2){
-				client.getCommandes();
-			}
+			if (a==2)	client.getCommandes();
 		}
 		em.close();
 		return true;

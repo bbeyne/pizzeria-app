@@ -70,5 +70,11 @@
 			<artifactId>pizzeria-domain</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>dta</groupId>
+			<artifactId>pizzeria-dao-jpa</artifactId>
+			<version>1.0.0</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 </project>
